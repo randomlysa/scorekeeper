@@ -15,7 +15,13 @@ body {
   font-size: 1.6rem;
 }
 
+input, button, select {
+  font-size: 1.9rem;
+}
+
 @import './components/title-bar';
 @import './components/wrapper';
 @import './components/item';
 @import './components/buttons';
+@import './components/player';
+@import './components/form';
