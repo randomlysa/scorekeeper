@@ -13,8 +13,8 @@ const modScore = (id, amount) => {
       $inc: {
         score: amount
       }
-  })
-}
+  }) // Players.update
+} // const modScore
 
 const renderPlayers = (playerList) => {
   return playerList.map(player => {
@@ -31,8 +31,8 @@ const renderPlayers = (playerList) => {
         }> X </button>
       </p>
     ) // return
-  })
-}
+  }) // playerList.map
+} // const renderPlayers
 
 const handleSubmit = (e) => {
   const playerName = e.target.playerName.value;
@@ -44,7 +44,7 @@ const handleSubmit = (e) => {
       score: 0
     })
   } // if playerName
-} // handleSubmit
+} // const handleSubmit
 
 Meteor.startup(() => {
   Tracker.autorun(() => {
