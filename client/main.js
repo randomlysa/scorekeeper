@@ -5,11 +5,23 @@ import { Tracker } from 'meteor/tracker'
 
 import { Players } from '../imports/api/players'
 
+const modScore = (id, amount) => {
+  Players.update(
+    id, {
+      $inc: {
+        score: amount
+      }
+  })
+}
+
 const renderPlayers = (playerList) => {
   return playerList.map(player => {
+    const id = player._id;
     return (
-      <p key={player._id}>{
-        player.name} has {player.score} point(s).
+      <p key={id}>
+        {player.name} has {player.score} point(s).
+        <button onClick={modScore.bind(this, id, 1)}>+1</button>
+        <button onClick={modScore.bind(this, id, -1)}>-1</button>
         <button onClick={
           () => {
             Players.remove({_id: player._id})
