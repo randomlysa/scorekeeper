@@ -4,6 +4,8 @@ import { Meteor } from 'meteor/meteor'
 import { Tracker } from 'meteor/tracker'
 
 import { Players } from '../imports/api/players'
+import TitleBar from '../imports/ui/TitleBar'
+import AddPlayer from '../imports/ui/AddPlayer'
 
 const modScore = (id, amount) => {
   Players.update(
@@ -50,12 +52,13 @@ Meteor.startup(() => {
     const title = 'Score Keeper'
     let jsx = (
       <div>
-        <h1>{title}</h1>
+        <TitleBar title={title} />
         {renderPlayers(players)}
         <form onSubmit={handleSubmit}>
           <input type="text" name="playerName" placeholder="Player name" />
           <button>Add player</button>
         </form>
+        <AddPlayer />
       </div>
     ); // let jsx
     ReactDom.render(
