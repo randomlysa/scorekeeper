@@ -20,9 +20,9 @@ export default class Player extends React.Component{
           {this.props.player.name} has {this.props.player.score} point(s)
         </p>
 
-        <button onClick={this.modScore.bind(this, this.props.player._id, 1)}>+1</button>
-        <button onClick={this.modScore.bind(this, this.props.player._id, -1)}>-1</button>
-        <button onClick={
+        <button className="button button--round" onClick={this.modScore.bind(this, this.props.player._id, 1)}>+1</button>
+        <button className="button button--round" onClick={this.modScore.bind(this, this.props.player._id, -1)}>-1</button>
+        <button className="button button--round" onClick={
           () => {
             Players.remove({_id: this.props.player._id})
           }
