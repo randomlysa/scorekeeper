@@ -1,0 +1,17 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  color: #555;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@import './components/title-bar';
+@import './components/wrapper';
