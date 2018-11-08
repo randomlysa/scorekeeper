@@ -5,9 +5,13 @@ import Player from './Player'
 
 export default class PlayerList extends React.Component{
   renderPlayers() {
-    return this.props.players.map(player => {
-      return <Player key={player._id} player={player} />
-    })
+    if (this.props.players.length === 0) {
+      return <p>Everyone quit! Add some players to start ~</p>
+    } else {
+      return this.props.players.map(player => {
+        return <Player key={player._id} player={player} />
+      })
+    }
   } // renderPlayers
 
   render() {
