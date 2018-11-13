@@ -41,4 +41,4 @@ Requirements
 - Wait a long time.
 - Open your app!
 
-Also, [meteor-buildpack-horse](https://github.com/AdmitHub/meteor-buildpack-horse), which will be used below, has instructions on deploying to Heroku.
+Also, [meteor-buildpack-horse](https://github.com/AdmitHub/meteor-buildpack-horse), which was used above, has instructions on deploying to Heroku.
